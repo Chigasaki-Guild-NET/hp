@@ -1,0 +1,462 @@
+body {
+	font-family: "¥Ò¥é¥®¥Î³Ñ¥´ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "¥á¥¤¥ê¥ª", Meiryo, "£Í£Ó £Ð¥´¥·¥Ã¥¯", "MS PGothic", sans-serif;
+	font-size: 14px;
+    line-height: 2em;
+    color: #50514F;
+    background-color:#F4F3F0;
+}
+
+/* HEADER
+--------------------------------------------*/
+/* Navigation */ 
+.navbar .navbar-inner {
+    padding: 0;
+}
+ 
+.navbar .nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+}
+ 
+.navbar .nav li {
+    display: table-cell;
+    float: none;
+}
+ 
+.navbar .nav li a {
+    font-weight: bold;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, .75);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+}
+ 
+.navbar .nav li:last-child a {
+    border-right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+
+/* MAIN
+--------------------------------------------*/
+/* Images */
+.main-img{
+    display: block;
+}
+
+ 
+/* COMMON
+--------------------------------------------*/ 
+/* Images */
+img{
+    max-width: 100%;
+    height: auto;
+}
+ 
+/* Text */
+.black100b {color:#50514F;font-size:100%; font-weight:bold;}
+.black130 {color:#50514F;font-size:130%;}
+
+
+h2.title_1{
+    font-size: 33px;
+	text-align:center;
+	margin-bottom:30px;
+	font-family: 'Quicksand', sans-serif;
+	letter-spacing: 1px;
+}
+
+h4.title_3{
+    font-size: 20px;
+	margin-bottom:20px;
+}
+
+.title_name{
+    font-size: 18px;
+	margin-bottom:20px;
+	letter-spacing: 3px;
+}
+
+/* Box */
+.box_in ul.ireko{
+	margin:0;
+}
+
+.box_in ul.ireko li{
+	margin:0;
+}
+
+.box_in p{
+	margin-bottom:20px;
+	text-align:left;
+}
+
+.row {
+	margin:0 -15px 20px 15px;
+}
+
+
+/* ABOUT
+--------------------------------------------*/ 
+/* Founder */
+.box_about i,.box_about2 i {
+	width: 35px;
+	height: 35px;
+	margin-right:10px;
+	border-radius: 50%;
+	background: #E0E1DF;
+	line-height: 36px;
+	text-align: center;
+	font-size:20px;
+}
+
+
+/* footer
+--------------------------------------------*/ 
+/* footer */
+
+/* footer Navi */
+#footer .navbar-nav{
+	float: none;
+	width: 450px;
+	margin: 10px auto;
+}
+
+#footer .navbar-nav > li{
+	text-align: center;
+	width: 33.3%;
+	font-size: 12px;
+}
+
+#footer .navbar-nav > li > a{
+    color: #fff;
+}
+
+/* SNS Icon */
+.sns-icon{
+    margin-top: 30px;
+}
+
+.sns-icon li{
+    padding-left: 20px;
+    color: #F4F8FA;
+}
+.sns-icon li:hover{
+    color: #7CB0C6;
+}
+
+/* Copywright */
+.copy{
+    margin-top: 20px;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+/*
+¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö
+
+¡¡ Media Queries
+
+¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö:::¡ö
+*/
+
+@media screen and (max-width: 767px) {
+/* HEADER
+--------------------------------------------*/
+/* Logo */
+ #portfolio-logo {
+    width: 100%;
+    height: auto;
+    margin: auto;
+	padding:20px 30px;
+	text-align:center;
+}
+
+/* COMMON
+--------------------------------------------*/ 
+/* Text */
+.title_sab{
+    font-size: 18px;
+	text-align:center;
+	margin-bottom:30px;
+	letter-spacing: 5px;
+}
+h3.title_2{
+    font-size: 20px;
+	margin-bottom:20px;
+	letter-spacing: 3px;
+	text-align:center;
+	border-bottom:2px solid #CACACA;
+	padding-bottom:10px;
+}
+
+/* Box */
+.box{
+	width:100%;
+	height:100%;
+	margin:0 0 30px 0;
+	padding:10px 20px;
+	background-color:#fff;
+}
+.box_in{
+	margin:0 0 30px 0;
+}
+
+.box_in li{
+	margin:0 0 15px -20px;
+}
+
+
+/* ABOUT
+--------------------------------------------*/ 
+/* Founder */
+.box_about{
+	text-align:center;
+	margin:0 20px;
+	padding:10px 20px 20px;
+}
+
+.box_about2{
+	text-align:center;
+	margin:0 50px;
+	padding:10px 20px 20px;
+	border-top:1px #D0D1CF solid;
+	border-bottom:1px #D0D1CF solid;
+}
+
+/* footer
+--------------------------------------------*/ 
+/* footer */
+#footer{
+	text-align: center;
+	margin-top:50px;
+	background-color: #50514F;
+}
+
+#footer .navbar-nav {
+    width: 100%;
+    margin: 0 auto;
+	padding-top:20px;
+}
+
+#footer .collapse {
+    display: block;
+}
+
+.nav>li {
+    float: left;
+}
+}
+
+
+@media screen and (min-width: 768px) {
+/* HEADER
+--------------------------------------------*/
+/* Logo */
+ #portfolio-logo {
+    width: 100%;
+    height: auto;
+    margin: auto auto 10px;
+	padding:50px 100px;
+	text-align:center;
+}
+/* COMMON
+--------------------------------------------*/ 
+/* Text */
+.title_sab{
+    font-size: 20px;
+	text-align:center;
+	margin-bottom:30px;
+	letter-spacing: 5px;
+}
+h3.title_2{
+    font-size: 22px;
+	margin-bottom:20px;
+	letter-spacing: 3px;
+}
+
+/* Box */
+.box{
+	width:100%;
+	height:100%;
+	margin:0 0 30px 0;
+	padding:50px 50px;
+	background-color:#fff;
+}
+
+.box_in{
+	margin:0 0 50px 0;
+}
+
+.box_in li{
+	margin:0 0 15px 0px;
+}
+
+/* ABOUT
+--------------------------------------------*/ 
+/* Founder */
+.box_about{
+	text-align:center;
+	padding:10px;
+}
+
+.box_about2{
+	text-align:center;
+	padding:10px;
+	border-left:1px #D0D1CF solid;
+	border-right:1px #D0D1CF solid;
+}
+
+/* footer
+--------------------------------------------*/ 
+/* footer */
+
+#footer{
+	text-align: center;
+	padding: 40px 0;
+	margin-top:80px;
+	background-color: #50514F;
+}
+}
+ 
+
+@media screen and (min-width: 992px) {
+/* HEADER
+--------------------------------------------*/
+/* Logo */
+ #portfolio-logo {
+    width: 100%;
+    height: auto;
+    margin: auto auto 10px;
+	padding:50px 100px;
+	text-align:center;
+}
+/* COMMON
+--------------------------------------------*/ 
+/* Text */
+.title_sab{
+    font-size: 20px;
+	text-align:center;
+	margin-bottom:30px;
+	letter-spacing: 5px;
+}
+h3.title_2{
+    font-size: 22px;
+	margin-bottom:20px;
+	letter-spacing: 3px;
+}
+
+/* Box */
+.box{
+	width:100%;
+	height:100%;
+	margin:0 0 30px 0;
+	padding:50px 100px;
+	background-color:#fff;
+}
+.box_in{
+	margin:0 0 50px 0;
+}
+
+.box_in li{
+	margin:0 0 15px -20px;
+}
+
+
+/* ABOUT
+--------------------------------------------*/ 
+/* Founder */
+.box_about{
+	text-align:center;
+	padding:10px;
+}
+
+.box_about2{
+	text-align:center;
+	padding:10px;
+	border-left:1px #D0D1CF solid;
+	border-right:1px #D0D1CF solid;
+}
+/* footer
+--------------------------------------------*/ 
+/* footer */
+
+#footer{
+	text-align: center;
+	padding: 40px 0;
+	margin-top:100px;
+	background-color: #50514F;
+}
+}
+ 
+
+@media screen and (min-width: 1200px) {
+/* HEADER
+--------------------------------------------*/
+/* Logo */
+ #portfolio-logo {
+    width: 100%;
+    height: auto;
+    margin: auto auto 10px;
+	padding:50px 100px;
+	text-align:center;
+}
+
+/* COMMON
+--------------------------------------------*/ 
+/* Text */
+.title_sab{
+    font-size: 20px;
+	text-align:center;
+	margin-bottom:30px;
+	letter-spacing: 5px;
+}
+h3.title_2{
+    font-size: 22px;
+	margin-bottom:20px;
+	letter-spacing: 3px;
+}
+
+/* Box */
+.box{
+	width:100%;
+	height:100%;
+	margin:0 0 30px 0;
+	padding:50px 100px;
+	background-color:#fff;
+}
+.box_in{
+	margin:0 0 50px 0;
+}
+
+.box_in li{
+	margin:0 0 15px -20px;
+}
+
+/* ABOUT
+--------------------------------------------*/ 
+/* Founder */
+.box_about{
+	text-align:center;
+	padding:10px;
+}
+
+.box_about2{
+	text-align:center;
+	padding:10px;
+	border-left:1px #D0D1CF solid;
+	border-right:1px #D0D1CF solid;
+}
+
+/* footer
+--------------------------------------------*/ 
+/* footer */
+
+#footer{
+	text-align: center;
+	padding: 40px 0;
+	margin-top:100px;
+	background-color: #50514F;
+}
+}
