@@ -10,27 +10,34 @@ handlers:
 - url: /
   static_files: static/html/index.html
   upload: static/html/index.html
+  secure: always
 
 - url: /(index.html)
   static_files: static/html/\1
   upload: static/html/.*
+  secure: always
 
 - url: /css
   static_dir: static/css
+  secure: always
 
 - url: /js
   static_dir: static/js
+  secure: always
 
 - url: /fonts
   static_dir: static/fonts
+  secure: always
 
 - url: /images/(.*\.(gif|png|jpg|svg))$
   static_files: static/images/\1
   upload: static/images/.*\.(gif|png|jpg|svg)$
+  secure: always
     
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
+  secure: always
   
 - url: /robots\.txt
   static_files: robots.txt
@@ -42,3 +49,4 @@ handlers:
 
 - url: /.*
   script: _go_app
+  secure: always
