@@ -10,14 +10,14 @@ machine:
 dependencies:
   pre:
     - curl -o $HOME/google_appengine_1.9.30.zip https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.30.zip
-    - unzip -q -d $HOME $HOME/google_appengine_1.9.30.zip
-    - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
+    - unzip -q -d ${HOME} ${HOME}/google_appengine_1.9.30.zip
+    - gcloud --quiet components update app
 
 test:
   override:
       - echo $GCLOUD_SERVICE_KEY_DEVELOPMENT | base64 --decode > ${HOME}/gcloud-service-key.json
-      - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
-      - sudo /opt/google-cloud-sdk/bin/gcloud config set project $GCLOUD_DEVELOPMENT_PROJECT
-      - cd hp/app
-      - sudo /opt/google-cloud-sdk/bin/gcloud -q preview app deploy app.yaml --promote --version=staging
+      - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
+      - gcloud config set project $GCLOUD_DEVELOPMENT_PROJECT
+      - cd ${HOME}/hp/app
+      - gcloud -q preview app deploy app.yaml --promote --version=staging
     
