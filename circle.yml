@@ -1,6 +1,7 @@
 general:
   branches:
-    - /development.*/
+    only:
+      - /development.*/
 
 machine:
   python:
