@@ -18,6 +18,5 @@ test:
       - echo $GCLOUD_SERVICE_KEY_DEVELOPMENT | base64 --decode > ${HOME}/gcloud-service-key.json
       - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
       - gcloud config set project $GCLOUD_DEVELOPMENT_PROJECT
-      - cd ${HOME}/hp/app
-      - gcloud -q preview app deploy app.yaml --promote --version=staging
+      - gcloud -q preview app deploy app/app.yaml --promote --version=staging
     
