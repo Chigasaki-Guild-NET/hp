@@ -15,7 +15,7 @@ test:
       - gcloud config set project $GCLOUD_DEVELOPMENT_PROJECT
       - gcloud -q app deploy app/app.yaml --promote --version=staging
     
-development
+development:
   staging:
     branch: master
     commands:
