@@ -7,7 +7,7 @@ test:
       - echo $GCLOUD_SERVICE_KEY_DEVELOPMENT | base64 --decode > ${HOME}/gcloud-service-key-dev.json
       - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key-dev.json
       - gcloud config set project $GCLOUD_DEVELOPMENT_PROJECT
-      - gcloud -q preview app deploy app/app.yaml --promote --version=staging
+      - gcloud -q app deploy app/app.yaml --promote --version=staging
     
 deployment:
   production:
@@ -16,4 +16,4 @@ deployment:
       - echo $GCLOUD_SERVICE_KEY | base64 --decode > ${HOME}/gcloud-service-key.json
       - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
       - gcloud config set project $GCLOUD_PROJECT
-      - gcloud -q preview app deploy app/app.yaml --promote --version=1
+      - gcloud -q app deploy app/app.yaml --promote --version=1
