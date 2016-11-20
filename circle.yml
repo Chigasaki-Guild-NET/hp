@@ -1,7 +1,3 @@
-machine:
-  python:
-    version: 2.7.11
-
 dependencies:
   pre:
     - gcloud --quiet components update app
