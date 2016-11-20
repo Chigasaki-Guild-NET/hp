@@ -1,22 +1,25 @@
-general:
-  branches:
-    only:
-      - /development.*/
-
 machine:
   python:
     version: 2.7
 
 dependencies:
   pre:
-    - curl -o $HOME/google_appengine_1.9.30.zip https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.30.zip
-    - unzip -q -d ${HOME} ${HOME}/google_appengine_1.9.30.zip
+    - curl -o $HOME/google_appengine_1.9.40.zip https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.40.zip
+    - unzip -q -d ${HOME} ${HOME}/google_appengine_1.9.40.zip
     - gcloud --quiet components update app
 
 test:
   override:
-      - echo $GCLOUD_SERVICE_KEY_DEVELOPMENT | base64 --decode > ${HOME}/gcloud-service-key.json
-      - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
+      - echo $GCLOUD_SERVICE_KEY_DEVELOPMENT | base64 --decode > ${HOME}/gcloud-service-key-dev.json
+      - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key-dev.json
       - gcloud config set project $GCLOUD_DEVELOPMENT_PROJECT
-      - gcloud -q preview app deploy app/app.yaml --promote --version=staging
+      - gcloud -q app deploy app/app.yaml --promote --version=staging
     
+development
+  staging:
+    branch: master
+    commands:
+      - echo $GCLOUD_SERVICE_KEY | base64 --decode > ${HOME}/gcloud-service-key.json
+      - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
+      - gcloud config set project $GCLOUD_PROJECT
+      - gcloud -q app deploy app/app.yaml --promote --version=1
