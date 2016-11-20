@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update app
+    - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
 
 test:
   override:
