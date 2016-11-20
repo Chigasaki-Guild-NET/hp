@@ -15,8 +15,8 @@ test:
       - gcloud config set project $GCLOUD_DEVELOPMENT_PROJECT
       - gcloud -q app deploy app/app.yaml --promote --version=staging
     
-development:
-  staging:
+deployment:
+  production:
     branch: master
     commands:
       - echo $GCLOUD_SERVICE_KEY | base64 --decode > ${HOME}/gcloud-service-key.json
