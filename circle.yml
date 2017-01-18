@@ -1,6 +1,7 @@
 dependencies:
   pre:
     - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
+    - sudo chown -R ubuntu /home/ubuntu/.config/gcloud
 
 test:
   override:
