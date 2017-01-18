@@ -21,6 +21,11 @@ handlers:
   upload: static/html/.*
   secure: always
 
+- url: /achievement/(index.html)
+  static_files: static/html/achievement/\1
+  upload: static/html/achievement/.*
+  secure: always
+
 - url: /css
   static_dir: static/css
   secure: always
