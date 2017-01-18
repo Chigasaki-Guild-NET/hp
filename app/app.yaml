@@ -12,9 +12,9 @@ handlers:
   upload: static/html/index.html
   secure: always
 
-- url: /achievement/
-  static_files: static/html/achievement/index.html
-  upload: static/html/achievement/index.html
+- url: /(.*)/
+  static_files: static/html/\1/index.html
+  upload: static/html/.*/index.html
   secure: always
 
 - url: /(index.html)
@@ -22,9 +22,9 @@ handlers:
   upload: static/html/.*
   secure: always
 
-- url: /achievement/(index.html)
-  static_files: static/html/achievement/\1
-  upload: static/html/achievement/.*
+- url: /(.*)/(index.html)
+  static_files: static/html/\1/\2
+  upload: static/html/\1/.*
   secure: always
 
 - url: /css
