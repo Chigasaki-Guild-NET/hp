@@ -13,18 +13,13 @@ handlers:
   secure: always
 
 - url: /achievement
-  static_files: static/html/achievement/index.html
-  upload: static/html/achievement/index.html
+  static_files: static/html/achievement/20170118.html
+  upload: static/html/achievement/20170118.html
   secure: always
 
 - url: /(index.html)
   static_files: static/html/\1
   upload: static/html/.*
-  secure: always
-
-- url: /achievement/(index.html)
-  static_files: static/html/achievement/\1
-  upload: static/html/achievement/.*
   secure: always
 
 - url: /css
